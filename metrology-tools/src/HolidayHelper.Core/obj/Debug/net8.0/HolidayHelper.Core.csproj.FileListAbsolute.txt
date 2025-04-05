@@ -1,0 +1,11 @@
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\HolidayHelper.Core\bin\Debug\net8.0\HolidayHelper.Core.deps.json
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\HolidayHelper.Core\bin\Debug\net8.0\HolidayHelper.Core.dll
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\HolidayHelper.Core\bin\Debug\net8.0\HolidayHelper.Core.pdb
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\HolidayHelper.Core\obj\Debug\net8.0\HolidayHelper.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\HolidayHelper.Core\obj\Debug\net8.0\HolidayHelper.Core.AssemblyInfoInputs.cache
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\HolidayHelper.Core\obj\Debug\net8.0\HolidayHelper.Core.AssemblyInfo.cs
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\HolidayHelper.Core\obj\Debug\net8.0\HolidayHelper.Core.csproj.CoreCompileInputs.cache
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\HolidayHelper.Core\obj\Debug\net8.0\HolidayHelper.Core.dll
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\HolidayHelper.Core\obj\Debug\net8.0\refint\HolidayHelper.Core.dll
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\HolidayHelper.Core\obj\Debug\net8.0\HolidayHelper.Core.pdb
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\HolidayHelper.Core\obj\Debug\net8.0\ref\HolidayHelper.Core.dll

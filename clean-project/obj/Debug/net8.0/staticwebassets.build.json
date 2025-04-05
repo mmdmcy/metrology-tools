@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "pdEWsFtN2A8UHEUub9euYc8Z4nYjljWe1jzKYtodUhU=",
+  "Source": "metrology-tools",
+  "BasePath": "_content/metrology-tools",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "metrology-tools\\wwwroot",
+      "Source": "metrology-tools",
+      "ContentRoot": "C:\\Users\\jelle\\Downloads\\metrology-tools\\clean-project\\wwwroot\\",
+      "BasePath": "_content/metrology-tools",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\jelle\\Downloads\\metrology-tools\\clean-project\\wwwroot\\index.html",
+      "SourceId": "metrology-tools",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jelle\\Downloads\\metrology-tools\\clean-project\\wwwroot\\",
+      "BasePath": "_content/metrology-tools",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}

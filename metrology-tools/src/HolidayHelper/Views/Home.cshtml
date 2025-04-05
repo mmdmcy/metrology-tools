@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Helper</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Holiday Helper</h1>
+        <h2>Submit a Vacation Request</h2>
+        <form asp-action="SubmitVacationRequest" method="post">
+            <div class="form-group">
+                <label for="EmployeeId">Employee ID</label>
+                <input type="text" id="EmployeeId" name="EmployeeId" required />
+            </div>
+            <div class="form-group">
+                <label for="StartDate">Start Date</label>
+                <input type="date" id="StartDate" name="StartDate" required />
+            </div>
+            <div class="form-group">
+                <label for="EndDate">End Date</label>
+                <input type="date" id="EndDate" name="EndDate" required />
+            </div>
+            <div class="form-group">
+                <label for="FTEPercentage">FTE Percentage</label>
+                <input type="number" id="FTEPercentage" name="FTEPercentage" min="0" max="100" required />
+            </div>
+            <button type="submit">Submit Request</button>
+        </form>
+        <h2>Check Availability</h2>
+        <form asp-action="GetAvailability" method="get">
+            <div class="form-group">
+                <label for="CheckStartDate">Start Date</label>
+                <input type="date" id="CheckStartDate" name="CheckStartDate" required />
+            </div>
+            <div class="form-group">
+                <label for="CheckEndDate">End Date</label>
+                <input type="date" id="CheckEndDate" name="CheckEndDate" required />
+            </div>
+            <button type="submit">Check Availability</button>
+        </form>
+    </div>
+</body>
+</html>

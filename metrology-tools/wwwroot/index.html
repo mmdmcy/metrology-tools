@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metrology Tools</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        h1 { color: #333; }
+        .card { 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
+            padding: 20px; 
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+        }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input, select { width: 100%; padding: 8px; box-sizing: border-box; }
+        button { padding: 10px 15px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+        .tab-container { display: flex; margin-bottom: 20px; }
+        .tab {
+            padding: 10px 20px;
+            background-color: #ddd;
+            cursor: pointer;
+            border-radius: 5px 5px 0 0;
+            margin-right: 5px;
+        }
+        .tab.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .feature-item {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .results {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Metrology Tools Dashboard</h1>
+        
+        <div class="tab-container">
+            <div class="tab active" onclick="openTab('holiday-helper')">Holiday Helper</div>
+            <div class="tab" onclick="openTab('pi-planner')">PI Planner</div>
+            <div class="tab" onclick="openTab('rd-test-mode')">RD Test Mode</div>
+        </div>
+        
+        <!-- Holiday Helper Tab -->
+        <div id="holiday-helper" class="tab-content active">
+            <div class="card">
+                <h2>Holiday Helper</h2>
+                <p>Manage team availability and vacation planning</p>
+                
+                <div class="form-group">
+                    <h3>Submit Vacation Request</h3>
+                    <div class="form-group">
+                        <label for="employeeId">Employee ID</label>
+                        <input type="text" id="employeeId" placeholder="Enter employee ID" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Start Date</label>
+                        <input type="date" id="startDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate">End Date</label>
+                        <input type="date" id="endDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ftePercentage">FTE Percentage</label>
+                        <input type="number" id="ftePercentage" min="0" max="100" value="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="competencyArea">Competency Area</label>
+                        <select id="competencyArea">
+                            <option value="software">Software Engineering</option>
+                            <option value="physics">Physics</option>
+                            <option value="mechanics">Mechanics</option>
+                            <option value="electronics">Electronics</option>
+                        </select>
+                    </div>
+                    <button id="submitVacationBtn">Submit Request</button>
+                </div>
+                
+                <div class="form-group">
+                    <h3>Check Availability</h3>
+                    <div class="form-group">
+                        <label for="checkEmployeeId">Employee ID</label>
+                        <input type="text" id="checkEmployeeId" placeholder="Enter employee ID">
+                    </div>
+                    <button id="checkAvailabilityBtn">Check Availability</button>
+                </div>
+                
+                <div class="form-group">
+                    <h3>Check Availability by Competency</h3>
+                    <div class="form-group">
+                        <label for="checkCompetency">Competency Area</label>
+                        <select id="checkCompetency">
+                            <option value="software">Software Engineering</option>
+                            <option value="physics">Physics</option>
+                            <option value="mechanics">Mechanics</option>
+                            <option value="electronics">Electronics</option>
+                        </select>
+                    </div>
+                    <button id="checkCompetencyBtn">Check Competency</button>
+                </div>
+                
+                <div id="holidayResults" class="results"></div>
+            </div>
+        </div>
+        
+        <!-- PI Planner Tab -->
+        <div id="pi-planner" class="tab-content">
+            <div class="card">
+                <h2>6-PI Planner</h2>
+                <p>Manage features across Program Increments</p>
+                
+                <div class="form-group">
+                    <h3>Add New Feature</h3>
+                    <div class="form-group">
+                        <label for="featureId">Feature ID</label>
+                        <input type="text" id="featureId" placeholder="Enter feature ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="featureTitle">Title</label>
+                        <input type="text" id="featureTitle" placeholder="Enter feature title">
+                    </div>
+                    <div class="form-group">
+                        <label for="storyPoints">Story Points</label>
+                        <input type="number" id="storyPoints" min="1" value="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="assignedTeam">Assigned Team</label>
+                        <input type="text" id="assignedTeam" placeholder="Enter team name">
+                    </div>
+                    <div class="form-group">
+                        <label for="featureStatus">Status</label>
+                        <select id="featureStatus">
+                            <option value="pending">Pending</option>
+                            <option value="inProgress">In Progress</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="programIncrement">Program Increment</label>
+                        <select id="programIncrement">
+                            <option value="1">PI 1</option>
+                            <option value="2">PI 2</option>
+                            <option value="3">PI 3</option>
+                            <option value="4">PI 4</option>
+                            <option value="5">PI 5</option>
+                            <option value="6">PI 6</option>
+                        </select>
+                    </div>
+                    <button id="addFeatureBtn">Add Feature</button>
+                </div>
+                
+                <div class="form-group">
+                    <h3>View Features by PI</h3>
+                    <div class="form-group">
+                        <label for="viewPi">Select Program Increment</label>
+                        <select id="viewPi">
+                            <option value="1">PI 1</option>
+                            <option value="2">PI 2</option>
+                            <option value="3">PI 3</option>
+                            <option value="4">PI 4</option>
+                            <option value="5">PI 5</option>
+                            <option value="6">PI 6</option>
+                        </select>
+                    </div>
+                    <button id="viewFeaturesBtn">View Features</button>
+                </div>
+                
+                <div id="plannerResults" class="results"></div>
+            </div>
+        </div>
+        
+        <!-- RD Test Mode Tab -->
+        <div id="rd-test-mode" class="tab-content">
+            <div class="card">
+                <h2>Unrestricted Test Mode</h2>
+                <p>For physics and software engineers to test beyond normal boundaries</p>
+                
+                <div class="form-group">
+                    <h3>Authentication</h3>
+                    <p>Note: This feature would require proper authentication in a real implementation</p>
+                    <div class="form-group">
+                        <label for="developerUsername">Developer Username</label>
+                        <input type="text" id="developerUsername" placeholder="Enter username">
+                    </div>
+                    <div class="form-group">
+                        <label for="developerPassword">Password</label>
+                        <input type="password" id="developerPassword" placeholder="Enter password">
+                    </div>
+                    <button id="testModeLoginBtn">Authenticate</button>
+                </div>
+                
+                <div id="testModeOptions" style="display: none;">
+                    <h3>Test Parameters</h3>
+                    <p>Adjust parameters beyond normal boundaries</p>
+                    <div class="form-group">
+                        <label for="param1">Parameter 1</label>
+                        <input type="range" id="param1" min="0" max="200" value="100">
+                        <span id="param1Value">100</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="param2">Parameter 2</label>
+                        <input type="range" id="param2" min="0" max="200" value="100">
+                        <span id="param2Value">100</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="param3">Parameter 3</label>
+                        <input type="range" id="param3" min="0" max="200" value="100">
+                        <span id="param3Value">100</span>
+                    </div>
+                    <button id="runUnrestrictedTestBtn">Run Test</button>
+                </div>
+                
+                <div id="testModeResults" class="results"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab functionality
+        function openTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show the selected tab content and mark tab as active
+            document.getElementById(tabName).classList.add('active');
+            document.querySelector(`.tab[onclick="openTab('${tabName}')"]`).classList.add('active');
+        }
+        
+        // Holiday Helper functionality
+        document.getElementById('submitVacationBtn').addEventListener('click', async () => {
+            const employeeId = document.getElementById('employeeId').value;
+            const startDate = document.getElementById('startDate').value;
+            const endDate = document.getElementById('endDate').value;
+            const ftePercentage = document.getElementById('ftePercentage').value;
+            const competencyArea = document.getElementById('competencyArea').value;
+            
+            try {
+                const response = await fetch('/api/holiday/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        employeeId,
+                        startDate,
+                        endDate,
+                        ftePercentage: parseFloat(ftePercentage),
+                        competencyArea
+                    })
+                });
+                
+                if (response.ok) {
+                    document.getElementById('holidayResults').innerHTML = '<p>Vacation request submitted successfully!</p>';
+                } else {
+                    document.getElementById('holidayResults').innerHTML = '<p>Error submitting request.</p>';
+                }
+            } catch (error) {
+                document.getElementById('holidayResults').innerHTML = `<p>Error: ${error.message}</p>`;
+            }
+        });
+        
+        document.getElementById('checkAvailabilityBtn').addEventListener('click', async () => {
+            const employeeId = document.getElementById('checkEmployeeId').value;
+            
+            try {
+                const response = await fetch(`/api/holiday/availability/${employeeId}`);
+                const data = await response.json();
+                
+                let resultsHtml = '<h3>Availability Results</h3>';
+                if (data.length === 0) {
+                    resultsHtml += '<p>No vacation requests found for this employee.</p>';
+                } else {
+                    resultsHtml += '<ul>';
+                    data.forEach(request => {
+                        resultsHtml += `<li>Employee ${request.employeeId}: ${new Date(request.startDate).toLocaleDateString()} to ${new Date(request.endDate).toLocaleDateString()} (FTE: ${request.ftePercentage}%, Competency: ${request.competencyArea})</li>`;
+                    });
+                    resultsHtml += '</ul>';
+                }
+                
+                document.getElementById('holidayResults').innerHTML = resultsHtml;
+            } catch (error) {
+                document.getElementById('holidayResults').innerHTML = `<p>Error: ${error.message}</p>`;
+            }
+        });
+        
+        document.getElementById('checkCompetencyBtn').addEventListener('click', async () => {
+            const competency = document.getElementById('checkCompetency').value;
+            
+            try {
+                const response = await fetch(`/api/holiday/availability/competency/${competency}`);
+                const data = await response.json();
+                
+                let resultsHtml = `<h3>Availability Results for ${competency}</h3>`;
+                if (data.length === 0) {
+                    resultsHtml += '<p>No vacation requests found for this competency area.</p>';
+                } else {
+                    resultsHtml += '<ul>';
+                    data.forEach(request => {
+                        resultsHtml += `<li>Employee ${request.employeeId}: ${new Date(request.startDate).toLocaleDateString()} to ${new Date(request.endDate).toLocaleDateString()} (FTE: ${request.ftePercentage}%)</li>`;
+                    });
+                    resultsHtml += '</ul>';
+                }
+                
+                document.getElementById('holidayResults').innerHTML = resultsHtml;
+            } catch (error) {
+                document.getElementById('holidayResults').innerHTML = `<p>Error: ${error.message}</p>`;
+            }
+        });
+        
+        // PI Planner functionality
+        document.getElementById('addFeatureBtn').addEventListener('click', async () => {
+            const featureId = document.getElementById('featureId').value;
+            const title = document.getElementById('featureTitle').value;
+            const storyPoints = document.getElementById('storyPoints').value;
+            const assignedTeam = document.getElementById('assignedTeam').value;
+            const status = document.getElementById('featureStatus').value;
+            const programIncrement = document.getElementById('programIncrement').value;
+            
+            try {
+                const response = await fetch('/api/planner/feature', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        id: featureId,
+                        title,
+                        storyPoints: parseInt(storyPoints),
+                        assignedTeam,
+                        status,
+                        programIncrement: parseInt(programIncrement)
+                    })
+                });
+                
+                if (response.ok) {
+                    document.getElementById('plannerResults').innerHTML = '<p>Feature added successfully!</p>';
+                } else {
+                    document.getElementById('plannerResults').innerHTML = '<p>Error adding feature.</p>';
+                }
+            } catch (error) {
+                document.getElementById('plannerResults').innerHTML = `<p>Error: ${error.message}</p>`;
+            }
+        });
+        
+        document.getElementById('viewFeaturesBtn').addEventListener('click', async () => {
+            const programIncrement = document.getElementById('viewPi').value;
+            
+            try {
+                const response = await fetch(`/api/planner/${programIncrement}`);
+                const data = await response.json();
+                
+                let resultsHtml = `<h3>Features in PI ${programIncrement}</h3>`;
+                if (data.length === 0) {
+                    resultsHtml += '<p>No features found for this Program Increment.</p>';
+                } else {
+                    data.forEach(feature => {
+                        resultsHtml += `
+                            <div class="feature-item">
+                                <strong>${feature.id}: ${feature.title}</strong>
+                                <p>Story Points: ${feature.storyPoints} | Team: ${feature.assignedTeam} | Status: ${feature.status}</p>
+                                <button onclick="moveFeature('${feature.id}')">Move to different PI</button>
+                            </div>
+                        `;
+                    });
+                }
+                
+                document.getElementById('plannerResults').innerHTML = resultsHtml;
+            } catch (error) {
+                document.getElementById('plannerResults').innerHTML = `<p>Error: ${error.message}</p>`;
+            }
+        });
+        
+        function moveFeature(featureId) {
+            const targetPi = prompt("Enter target Program Increment (1-6):");
+            if (targetPi && !isNaN(targetPi) && targetPi >= 1 && targetPi <= 6) {
+                fetch('/api/planner/feature/move', {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        featureId,
+                        targetPi: parseInt(targetPi)
+                    })
+                })
+                .then(response => {
+                    if (response.ok) {
+                        alert("Feature moved successfully!");
+                        document.getElementById('viewFeaturesBtn').click();
+                    } else {
+                        alert("Error moving feature.");
+                    }
+                })
+                .catch(error => {
+                    alert(`Error: ${error.message}`);
+                });
+            } else {
+                alert("Invalid Program Increment. Please enter a number between 1 and 6.");
+            }
+        }
+        
+        // RD Test Mode functionality
+        document.getElementById('testModeLoginBtn').addEventListener('click', () => {
+            const username = document.getElementById('developerUsername').value;
+            const password = document.getElementById('developerPassword').value;
+            
+            // Simple mock authentication - in a real app, this would be a secure auth process
+            if (username && password) {
+                document.getElementById('testModeOptions').style.display = 'block';
+                document.getElementById('testModeResults').innerHTML = '<p>Authentication successful. Test mode enabled.</p>';
+            } else {
+                document.getElementById('testModeResults').innerHTML = '<p>Authentication failed. Please provide valid credentials.</p>';
+            }
+        });
+        
+        // Update parameter value displays when sliders change
+        document.getElementById('param1').addEventListener('input', () => {
+            document.getElementById('param1Value').textContent = document.getElementById('param1').value;
+        });
+        
+        document.getElementById('param2').addEventListener('input', () => {
+            document.getElementById('param2Value').textContent = document.getElementById('param2').value;
+        });
+        
+        document.getElementById('param3').addEventListener('input', () => {
+            document.getElementById('param3Value').textContent = document.getElementById('param3').value;
+        });
+        
+        document.getElementById('runUnrestrictedTestBtn').addEventListener('click', () => {
+            const param1 = document.getElementById('param1').value;
+            const param2 = document.getElementById('param2').value;
+            const param3 = document.getElementById('param3').value;
+            
+            // In a real app, this would communicate with actual testing equipment
+            const resultsHtml = `
+                <h3>Test Results</h3>
+                <p>Test executed with parameters beyond normal boundaries:</p>
+                <ul>
+                    <li>Parameter 1: ${param1} (normal range: 20-80)</li>
+                    <li>Parameter 2: ${param2} (normal range: 40-60)</li>
+                    <li>Parameter 3: ${param3} (normal range: 30-70)</li>
+                </ul>
+                <p>The test completed successfully. Data collected for analysis.</p>
+            `;
+            
+            document.getElementById('testModeResults').innerHTML = resultsHtml;
+        });
+    </script>
+</body>
+</html>

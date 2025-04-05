@@ -1,0 +1,6 @@
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\tests\RDTestModeTests\bin\Debug\net8.0\CoverletSourceRootsMapping_RDTestModeTests
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\tests\RDTestModeTests\obj\Debug\net8.0\RDTestModeTests.csproj.AssemblyReference.cache
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\tests\RDTestModeTests\obj\Debug\net8.0\RDTestModeTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\tests\RDTestModeTests\obj\Debug\net8.0\RDTestModeTests.AssemblyInfoInputs.cache
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\tests\RDTestModeTests\obj\Debug\net8.0\RDTestModeTests.AssemblyInfo.cs
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\tests\RDTestModeTests\obj\Debug\net8.0\RDTestModeTests.csproj.CoreCompileInputs.cache

@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "aXRvF488tb77UZ6kaV+vCwTLOx9oDyeVD1HCHVaxSBI=",
+  "Source": "HolidayHelper",
+  "BasePath": "_content/HolidayHelper",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "HolidayHelper\\wwwroot",
+      "Source": "HolidayHelper",
+      "ContentRoot": "C:\\Users\\jelle\\Downloads\\metrology-tools\\clean-start\\HolidayHelper\\wwwroot\\",
+      "BasePath": "_content/HolidayHelper",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

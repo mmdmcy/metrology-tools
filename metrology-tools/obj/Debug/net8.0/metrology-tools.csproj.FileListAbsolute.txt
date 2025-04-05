@@ -1,0 +1,10 @@
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\obj\Debug\net8.0\metrology-tools.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\obj\Debug\net8.0\metrology-tools.AssemblyInfoInputs.cache
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\obj\Debug\net8.0\metrology-tools.AssemblyInfo.cs
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\obj\Debug\net8.0\metrology-tools.csproj.CoreCompileInputs.cache
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\obj\Debug\net8.0\metrology-tools.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\obj\Debug\net8.0\metrology-tools.RazorAssemblyInfo.cache
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\obj\Debug\net8.0\metrology-tools.RazorAssemblyInfo.cs
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\obj\Debug\net8.0\metrology-tools.csproj.AssemblyReference.cache
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\obj\Debug\net8.0\metrology-tools.gentestingplatformentrypointinputcache.cache
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\obj\Debug\net8.0\metrology-tools.genautoregisteredextensionsinputcache.cache

@@ -1,0 +1,11 @@
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\RDTestMode.Core\bin\Debug\net8.0\RDTestMode.Core.deps.json
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\RDTestMode.Core\bin\Debug\net8.0\RDTestMode.Core.dll
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\RDTestMode.Core\bin\Debug\net8.0\RDTestMode.Core.pdb
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\RDTestMode.Core\obj\Debug\net8.0\RDTestMode.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\RDTestMode.Core\obj\Debug\net8.0\RDTestMode.Core.AssemblyInfoInputs.cache
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\RDTestMode.Core\obj\Debug\net8.0\RDTestMode.Core.AssemblyInfo.cs
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\RDTestMode.Core\obj\Debug\net8.0\RDTestMode.Core.csproj.CoreCompileInputs.cache
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\RDTestMode.Core\obj\Debug\net8.0\RDTestMode.Core.dll
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\RDTestMode.Core\obj\Debug\net8.0\refint\RDTestMode.Core.dll
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\RDTestMode.Core\obj\Debug\net8.0\RDTestMode.Core.pdb
+C:\Users\jelle\Downloads\metrology-tools\metrology-tools\src\RDTestMode.Core\obj\Debug\net8.0\ref\RDTestMode.Core.dll
