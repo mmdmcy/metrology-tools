@@ -1,6 +1,0 @@
-C:\Users\owner\Downloads\metrology-tools\metrology-tools\tests\HolidayHelperTests\bin\Debug\net8.0\CoverletSourceRootsMapping_HolidayHelperTests
-C:\Users\owner\Downloads\metrology-tools\metrology-tools\tests\HolidayHelperTests\obj\Debug\net8.0\HolidayHelperTests.csproj.AssemblyReference.cache
-C:\Users\owner\Downloads\metrology-tools\metrology-tools\tests\HolidayHelperTests\obj\Debug\net8.0\HolidayHelperTests.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\owner\Downloads\metrology-tools\metrology-tools\tests\HolidayHelperTests\obj\Debug\net8.0\HolidayHelperTests.AssemblyInfoInputs.cache
-C:\Users\owner\Downloads\metrology-tools\metrology-tools\tests\HolidayHelperTests\obj\Debug\net8.0\HolidayHelperTests.AssemblyInfo.cs
-C:\Users\owner\Downloads\metrology-tools\metrology-tools\tests\HolidayHelperTests\obj\Debug\net8.0\HolidayHelperTests.csproj.CoreCompileInputs.cache
